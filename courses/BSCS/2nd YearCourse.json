@@ -1,0 +1,93 @@
+{
+    "2nd Year": {
+        "1st Semester": [
+            {
+                "courseId": "GE116",
+                "name": "Art Appreciation",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "GE117",
+                "name": "Science, Technology and Society",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "ENG101",
+                "name": "Oral Communication for Academic Purposes",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "CC113",
+                "name": "Computer Programming 2",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "CC114",
+                "name": "Data Structures and Algorithms",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "ACCTG",
+                "name": "Fundamentals of Accounting",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "PATHFIT103",
+                "name": "Dance and Sports",
+                "courseUnit": "2"
+            },
+            {
+                "courseId": "SIPP",
+                "name": "Social Issues and Professional Practice",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "STAT",
+                "name": "Probability and Statistics",
+                "courseUnit": "3"
+            }
+        ],
+        "2nd Semester": [
+            {
+                "courseId": "GE118",
+                "name": "Mathematics in the Modern World",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "CS101",
+                "name": "Object Oriented Programming",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "CS102",
+                "name": "Design and Analysis of Algorithms",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "CS103",
+                "name": "Discrete Structures 1",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "ENG102",
+                "name": "Business Report and Correspondence",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "GE ELECT112",
+                "name": "Technopreneurship",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "CC115",
+                "name": "Information Management",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "PATHFIT104",
+                "name": "Group Exercise, Outdoor, Adventure Activities",
+                "courseUnit": "3"
+            }
+        ]
+    }    
+}

@@ -1,0 +1,98 @@
+{
+    "1st Year": {
+        "1st Semester": [
+            {
+                "courseId": "GE111",
+                "name": "Understanding the Self",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "GE112",
+                "name": "Readings in Philippine History",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "GE113",
+                "name": "The Contemporary World",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "GE ELECT 111",
+                "name": "Living in an IT ERA",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "RL",
+                "name": "Rizal's Life and Works",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "EN100",
+                "name": "Basic English Course 1",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "MAT100",
+                "name": "Introductory Mathematics",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "NSTP101",
+                "name": "CWTS1",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "PATHFIT101",
+                "name": "Movement Competency Training",
+                "courseUnit": "2"
+            }
+        ],
+        "2nd Semester": [
+            {
+                "courseId": "GE114",
+                "name": "Mathematics in the Modern World",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "GE115",
+                "name": "Purposive Communication",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "CC111",
+                "name": "Introduction to Computing",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "CC112",
+                "name": "Computer Programming 1",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "EN100+",
+                "name": "Basic English Course 2",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "MAT100+",
+                "name": "Pre-Calculus Course",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "NSTP102",
+                "name": "CWTS2",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "VAL111",
+                "name": "KNS Values Formation",
+                "courseUnit": "3"
+            },
+            {
+                "courseId": "PATHFIT102",
+                "name": "Exercise-Based Fitness Activities",
+                "courseUnit": "3"
+            }
+        ]
+    }
+}
