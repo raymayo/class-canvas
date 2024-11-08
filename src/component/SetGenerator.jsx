@@ -684,7 +684,7 @@ const SetGenerator = () => {
 									{schedule.courseUnit}
 								</td>
 								<td className="px-4 py-2 border-b text-gray-700">
-									{schedule.day}
+									{schedule.day.join(' - ')}
 								</td>
 								<td className="px-4 py-2 border-b text-gray-700">
 									{convertTo12Hour(schedule.startTime)} -{' '}

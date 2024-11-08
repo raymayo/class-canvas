@@ -72,7 +72,7 @@ const SetsList = () => {
 						Sem<p className="text-base font-semibold">{set.semester}</p>
 					</label>
 				</div>
-				<div className="h-full">{renderEditCourses(set.courses)}</div>
+				
 			</div>
 			)
 		);
@@ -159,7 +159,7 @@ const SetsList = () => {
 								{convertTo12Hour(course.startTime)} -{' '}
 								{convertTo12Hour(course.endTime)}
 							</td>
-							<td className="">{course.day.join('-')}</td>
+							<td className="">{course.day.join(' - ')}</td>
 							<td className="">{course.room}</td>
 						</tr>
 					))}
@@ -168,82 +168,49 @@ const SetsList = () => {
 		</div>
 	);
 
-	const renderEditCourses = (courses) => (
-		<div className="border border-neutral-300 w-5/5 mx-auto p-4 rounded-md shadow-sm font-clash h-full">
-			<table className="w-full">
-				<thead>
-					<tr>
-						<th className="text-left font-semibold">Subject Code</th>
-						<th className="text-left font-semibold">Description</th>
-						<th className="text-left font-semibold">Units</th>
-						<th className="text-left font-semibold">Time</th>
-						<th className="text-left font-semibold">Day</th>
-						<th className="text-left font-semibold">Room</th>
-						<th className="text-left font-semibold">Actions</th>
-					</tr>
-				</thead>
-				<tbody>
-					{courses.map((course, index) => (
-						<tr key={index} className="border-b border-neutral-300">
-							<td className="py-2">{course.courseId}</td>
-							<td className="py-2">{course.courseName}</td>
-							<td className="py-2">{course.courseUnit}</td>
-							<td className="py-2">
-								{convertTo12Hour(course.startTime)} -{' '}
-								{convertTo12Hour(course.endTime)}
-							</td>
-							<td className="">{course.day.join('-')}</td>
-							<td className="">{course.room}</td>
-							<td className=""><button>Edit</button></td>
-						</tr>
-					))}
-				</tbody>
-			</table>
-		</div>
-	);
 
 
-	const mergeDuplicate = (courseParam) => {
-		let newSets = [];
+	// const mergeDuplicate = (courseParam) => {
+	// 	let newSets = [];
 	
-		// Iterate over each set in courseParam
-		courseParam.forEach(set => {
-			let courseMap = new Map();  // Map to store unique courses
-			let mergedCourses = [];  // Array to store merged courses for the current set
+	// 	// Iterate over each set in courseParam
+	// 	courseParam.forEach(set => {
+	// 		let courseMap = new Map();  // Map to store unique courses
+	// 		let mergedCourses = [];  // Array to store merged courses for the current set
 	
-			set.courses.forEach(currCourse => {
-				const courseKey = `${currCourse.courseName}-${currCourse.room}`;
+	// 		set.courses.forEach(currCourse => {
+	// 			const courseKey = `${currCourse.courseName}-${currCourse.room}`;
 	
-				if (courseMap.has(courseKey)) {
-					// Duplicate found, merge days and keep the existing start and end times
-					let existingCourse = courseMap.get(courseKey);
+	// 			if (courseMap.has(courseKey)) {
+	// 				// Duplicate found, merge days and keep the existing start and end times
+	// 				let existingCourse = courseMap.get(courseKey);
 					
-					// Merge day without duplicates
-					existingCourse.day = [...new Set([...existingCourse.day, currCourse.day])];
-				} else {
-					// No duplicate, add to map and array
-					courseMap.set(courseKey, {
-						courseId: currCourse.courseId,
-						courseName: currCourse.courseName,
-						courseUnit: currCourse.courseUnit,
-						day: [currCourse.day],  // Store day as an array to merge later
-						startTime: currCourse.startTime,
-						endTime: currCourse.endTime,
-						room: currCourse.room
-					});
-					mergedCourses.push(courseMap.get(courseKey));
-				}
-			});
+	// 				// Merge day without duplicates
+	// 				existingCourse.day = [...new Set([...existingCourse.day, currCourse.day])];
+	// 			} else {
+	// 				// No duplicate, add to map and array
+	// 				courseMap.set(courseKey, {
+	// 					courseId: currCourse.courseId,
+	// 					courseName: currCourse.courseName,
+	// 					courseUnit: currCourse.courseUnit,
+	// 					day: [currCourse.day],  // Store day as an array to merge later
+	// 					startTime: currCourse.startTime,
+	// 					endTime: currCourse.endTime,
+	// 					room: currCourse.room
+	// 				});
+	// 				mergedCourses.push(courseMap.get(courseKey));
+	// 			}
+	// 		});
 	
-			// Add the set with merged courses to the newSets array
-			newSets.push({
-				...set,
-				courses: mergedCourses,
-			});
-		});
+	// 		// Add the set with merged courses to the newSets array
+	// 		newSets.push({
+	// 			...set,
+	// 			courses: mergedCourses,
+	// 		});
+	// 	});
 	
-		return newSets;
-	};
+	// 	return newSets;
+	// };
 	
 
 	return (
@@ -309,7 +276,7 @@ const SetsList = () => {
 							</tr>
 						</thead>
 						<tbody>
-							{mergeDuplicate(sets).map((set) => (
+							{sets.map((set) => (
 								<tr key={set._id} className="">
 									<td className="border-b border-neutral-300 px-4 py-2">
 										{set.name}
