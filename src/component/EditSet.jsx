@@ -157,7 +157,7 @@ const EditSet = () => {
 						<tbody>
 							{(editedSet.courses || []).map((course, index) => (
 								<tr key={index} className="border-b border-neutral-300">
-									<td>
+									<td className='border border-neutral-300'>
 										<input
 											type="text"
 											name="courseId"
@@ -166,7 +166,7 @@ const EditSet = () => {
 											className="p-2 text-sm w-full bg-transparent"
 										/>
 									</td>
-									<td>
+									<td className='border border-neutral-300'>
 										<input
 											type="text"
 											name="courseName"
@@ -175,7 +175,7 @@ const EditSet = () => {
 											className="p-2 text-sm w-full bg-transparent"
 										/>
 									</td>
-									<td>
+									<td className='border border-neutral-300'>
 										<input
 											type="text"
 											name="courseUnit"
@@ -184,12 +184,11 @@ const EditSet = () => {
 											className="p-2 text-sm w-full bg-transparent"
 										/>
 									</td>
-									<td>
-										<div className="flex gap-2">
+									<td className='border border-neutral-300'>
 											{['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map((day) => (
 												<label
 													key={day}
-													className="border border-red-500 rounded-md cursor-pointer">
+													className="rounded-md cursor-pointer">
 													<input
 														type="checkbox"
 														checked={course.day.includes(day)}
@@ -198,9 +197,8 @@ const EditSet = () => {
 													{day}
 												</label>
 											))}
-										</div>
 									</td>
-									<td>
+									<td className='border border-neutral-300'>
 										<input
 											type="text"
 											name="room"
@@ -209,7 +207,7 @@ const EditSet = () => {
 											className="p-2 text-sm w-full bg-transparent"
 										/>
 									</td>
-									<td>
+									<td className='border border-neutral-300'>
 										<input
 											type="time"
 											name="startTime"
