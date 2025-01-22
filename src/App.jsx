@@ -5,6 +5,7 @@ import SetGenerator from './component/SetGenerator.jsx';
 import SetsList from './component/SetsList.jsx';
 import EditSet from './component/EditSet.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AvailabilityVisual from './component/AvailabilityVisual.jsx';
 
 const App = () => {
 
@@ -14,6 +15,8 @@ const App = () => {
 			<Route path="/" element={<SetGenerator/> } />
 			<Route path="/sets" element={<SetsList />} />
 			<Route path="/edit-set" element={<EditSet />} />
+			<Route path="/availability" element={<AvailabilityVisual/>} />
+
 			</Routes>
 		</Router>
 	);

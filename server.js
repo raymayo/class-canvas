@@ -89,6 +89,32 @@ router.get('/sets', async (req, res) => {
   }
 });
 
+
+
+router.get('/room', async (req, res) => {
+  try {
+    const { room } = req.query; // Extract room name from query parameter
+
+    if (!room) {
+      return res.status(400).json({ message: 'Room name is required.' });
+    }
+
+    const schedules = await CourseSchedule.find({ room });
+
+    if (schedules.length === 0) {
+      return res.status(404).json({ message: `No schedules found for room: ${room}` });
+    }
+
+    res.status(200).json(schedules);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal Server Error', error });
+  }
+});
+
+
+
+
 app.use('/api', router); // Use the router under the '/api' path
 
 const PORT = process.env.PORT || 5000;
